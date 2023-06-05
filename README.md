@@ -50,8 +50,6 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
 - **Simple calculator app built with JSX**
 - **Single page app with 3 pages**
 - **Random quote generator**
