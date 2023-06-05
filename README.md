@@ -115,12 +115,9 @@ To run the project, execute the following command:
 To run tests, run the following command:
 
 
-
-
 ```sh
   npm test
 ```
-
 
 ### Deployment
 
@@ -132,8 +129,6 @@ You can deploy this project using github pages
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 👤 **Tomás Esquivel**
 
 - GitHub: [@tomasesquivelgc](https://github.com/tomasesquivelgc)
@@ -143,8 +138,6 @@ You can deploy this project using github pages
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
 
 - [ ] **Calculator**
 - [ ] **About page**
