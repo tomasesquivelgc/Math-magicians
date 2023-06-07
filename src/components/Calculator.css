@@ -1,0 +1,30 @@
+.calculator {
+  text-align: right;
+  border: 1px solid black;
+  width: 500px;
+  background-color: #858694;
+  margin: auto auto;
+}
+
+button {
+  height: 6vh;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.double-button {
+  grid-column: span 2;
+}
+
+.buttons > :nth-child(4n),
+.buttons > :last-child {
+  background-color: orange;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: aqua;
+}
