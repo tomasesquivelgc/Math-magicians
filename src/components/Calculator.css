@@ -4,10 +4,8 @@
   width: 500px;
 }
 
-Button {
+button {
   height: 5vh;
-
-  
 }
 
 .buttons {
@@ -24,7 +22,7 @@ Button {
   background-color: orange;
 }
 
-Button:hover {
+button:hover {
   cursor: pointer;
   background-color: aqua;
 }
