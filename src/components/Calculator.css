@@ -1,0 +1,14 @@
+.calculator {
+  text-align: center;
+  border: 1px solid black;
+  width: 500px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.double-button {
+  grid-column: span 2;
+}
