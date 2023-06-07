@@ -2,6 +2,8 @@
   text-align: right;
   border: 1px solid black;
   width: 500px;
+  background-color: #858694;
+  margin: auto auto;
 }
 
 button {
