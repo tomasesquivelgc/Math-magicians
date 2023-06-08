@@ -1,9 +1,12 @@
 import Calculator from './components/calculator';
+import Quote from './components/Quote';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Calculator />
+      <Quote />
     </div>
   );
 }
