@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Calculator.css';
+import calculate from '../logic/calculate';
 
 // Button component
-function Button({ value, className }) {
+function Button({ value, className, onClick }) {
+  const handleClick = () => {
+    onClick(value);
+  };
+
   return (
-    <button type="button" className={className}>
+    <button type="button" className={className} onClick={handleClick}>
       {value}
     </button>
   );
@@ -14,6 +19,7 @@ function Button({ value, className }) {
 Button.propTypes = {
   value: PropTypes.string.isRequired,
   className: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
 };
 
 Button.defaultProps = {
@@ -22,29 +28,40 @@ Button.defaultProps = {
 
 // Calculator component
 function Calculator() {
+  const [calculatorData, setCalculatorData] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
+
+  const handleClick = (buttonName) => {
+    const newData = calculate(calculatorData, buttonName);
+    setCalculatorData(newData);
+  };
+
   return (
     <div className="calculator">
-      <div className="calculator-display">0</div>
+      <div className="display">{calculatorData.next || calculatorData.total || '0'}</div>
       <div className="buttons">
-        <Button value="AC" />
-        <Button value="+/-" />
-        <Button value="%" />
-        <Button value="÷" />
-        <Button value="7" />
-        <Button value="8" />
-        <Button value="9" />
-        <Button value="x" />
-        <Button value="4" />
-        <Button value="5" />
-        <Button value="6" />
-        <Button value="-" />
-        <Button value="1" />
-        <Button value="2" />
-        <Button value="3" />
-        <Button value="+" />
-        <Button value="0" className="double-button" />
-        <Button value="." />
-        <Button value="=" />
+        <Button onClick={handleClick} value="AC" />
+        <Button onClick={handleClick} value="+/-" />
+        <Button onClick={handleClick} value="%" />
+        <Button onClick={handleClick} value="÷" />
+        <Button onClick={handleClick} value="7" />
+        <Button onClick={handleClick} value="8" />
+        <Button onClick={handleClick} value="9" />
+        <Button onClick={handleClick} value="x" />
+        <Button onClick={handleClick} value="4" />
+        <Button onClick={handleClick} value="5" />
+        <Button onClick={handleClick} value="6" />
+        <Button onClick={handleClick} value="-" />
+        <Button onClick={handleClick} value="1" />
+        <Button onClick={handleClick} value="2" />
+        <Button onClick={handleClick} value="3" />
+        <Button onClick={handleClick} value="+" />
+        <Button className="double-button" onClick={handleClick} value="0" />
+        <Button onClick={handleClick} value="." />
+        <Button onClick={handleClick} value="=" />
       </div>
     </div>
   );
