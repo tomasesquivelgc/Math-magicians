@@ -10,6 +10,8 @@ const Quote = () => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
+    let isMounted = true; // to track whether the component is mounted or not
+
     const fetchQuote = async () => {
       try {
         const response = await fetch(apiUrl, {
@@ -19,17 +21,27 @@ const Quote = () => {
         });
         const data = await response.json();
         const { quote, author } = data[0];
-        setQuote(quote);
-        setAuthor(author);
-        setLoading(false);
+
+        if (isMounted) {
+          setQuote(quote);
+          setAuthor(author);
+          setLoading(false);
+        }
       } catch (error) {
         console.error('Error fetching quote:', error);
-        setError(true);
-        setLoading(false);
+
+        if (isMounted) {
+          setError(true);
+          setLoading(false);
+        }
       }
     };
 
     fetchQuote();
+
+    return () => {
+      isMounted = false; // cleanup function to handle component unmounting
+    };
   }, []);
 
   if (loading) {
