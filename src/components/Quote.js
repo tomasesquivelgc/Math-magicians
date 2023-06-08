@@ -28,10 +28,8 @@ const Quote = () => {
           setLoading(false);
         }
       } catch (error) {
-        console.error('Error fetching quote:', error);
-
         if (isMounted) {
-          setError(true);
+          setError('Error getting quote');
           setLoading(false);
         }
       }
