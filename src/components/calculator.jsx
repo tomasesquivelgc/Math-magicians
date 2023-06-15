@@ -4,7 +4,7 @@ import './Calculator.css';
 import calculate from '../logic/calculate';
 
 // Button component
-function Button({ value, className, onClick }) {
+function Button({ value, className = 'button', onClick }) {
   const handleClick = () => {
     onClick(value);
   };
@@ -21,7 +21,6 @@ Button.propTypes = {
   className: PropTypes.string,
   onClick: PropTypes.func.isRequired,
 };
-
 Button.defaultProps = {
   className: 'button',
 };
