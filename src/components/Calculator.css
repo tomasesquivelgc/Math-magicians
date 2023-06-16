@@ -1,3 +1,9 @@
+.calculatorBody {
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+}
+
 .calculator {
   text-align: right;
   border: 1px solid black;
