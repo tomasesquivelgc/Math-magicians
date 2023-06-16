@@ -137,9 +137,9 @@ You can deploy this project using github pages
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Calculator**
-- [ ] **About page**
-- [ ] **Quote generator**
+- [X] **Calculator**
+- [X] **About page**
+- [X] **Quote generator**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
