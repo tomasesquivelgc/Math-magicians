@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Quote.css';
 
 const apiUrl = 'https://api.api-ninjas.com/v1/quotes';
 const apiKey = 'aWjSOxjlUZMzuACOgdjfEA==oarjAfYParQOdUCb';
@@ -43,7 +44,7 @@ const Quote = () => {
   }, []);
 
   if (loading) {
-    return <h2>Loading quote...</h2>;
+    return <h2 className="loadingBody">Loading quote...</h2>;
   }
 
   if (error) {
@@ -51,14 +52,14 @@ const Quote = () => {
   }
 
   return (
-    <div>
+    <section className="quoteBody">
       <h2>Random Quote:</h2>
       <h3>{quote}</h3>
       <p>
         -
         {author}
       </p>
-    </div>
+    </section>
   );
 };
 
