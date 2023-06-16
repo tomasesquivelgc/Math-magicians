@@ -9,16 +9,19 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <nav>
+      <nav className="navBar">
+        <h1>Math magicians</h1>
         <ul>
+          <li>
+            <Link to="/about">Home</Link>
+          </li>
+          <span>|</span>
           <li>
             <Link to="/">Calculator</Link>
           </li>
+          <span>|</span>
           <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/quote">Quote Generator</Link>
+            <Link to="/quote">Quote</Link>
           </li>
         </ul>
       </nav>
