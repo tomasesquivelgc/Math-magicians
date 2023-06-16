@@ -39,30 +39,33 @@ function Calculator() {
   };
 
   return (
-    <div className="calculator">
-      <div className="display">{calculatorData.next || calculatorData.total || '0'}</div>
-      <div className="buttons">
-        <Button onClick={handleClick} value="AC" />
-        <Button onClick={handleClick} value="+/-" />
-        <Button onClick={handleClick} value="%" />
-        <Button onClick={handleClick} value="÷" />
-        <Button onClick={handleClick} value="7" />
-        <Button onClick={handleClick} value="8" />
-        <Button onClick={handleClick} value="9" />
-        <Button onClick={handleClick} value="x" />
-        <Button onClick={handleClick} value="4" />
-        <Button onClick={handleClick} value="5" />
-        <Button onClick={handleClick} value="6" />
-        <Button onClick={handleClick} value="-" />
-        <Button onClick={handleClick} value="1" />
-        <Button onClick={handleClick} value="2" />
-        <Button onClick={handleClick} value="3" />
-        <Button onClick={handleClick} value="+" />
-        <Button className="double-button" onClick={handleClick} value="0" />
-        <Button onClick={handleClick} value="." />
-        <Button onClick={handleClick} value="=" />
+    <section>
+      <h2>Lets do some math!</h2>
+      <div className="calculator">
+        <div className="display">{calculatorData.next || calculatorData.total || '0'}</div>
+        <div className="buttons">
+          <Button onClick={handleClick} value="AC" />
+          <Button onClick={handleClick} value="+/-" />
+          <Button onClick={handleClick} value="%" />
+          <Button onClick={handleClick} value="÷" />
+          <Button onClick={handleClick} value="7" />
+          <Button onClick={handleClick} value="8" />
+          <Button onClick={handleClick} value="9" />
+          <Button onClick={handleClick} value="x" />
+          <Button onClick={handleClick} value="4" />
+          <Button onClick={handleClick} value="5" />
+          <Button onClick={handleClick} value="6" />
+          <Button onClick={handleClick} value="-" />
+          <Button onClick={handleClick} value="1" />
+          <Button onClick={handleClick} value="2" />
+          <Button onClick={handleClick} value="3" />
+          <Button onClick={handleClick} value="+" />
+          <Button className="double-button" onClick={handleClick} value="0" />
+          <Button onClick={handleClick} value="." />
+          <Button onClick={handleClick} value="=" />
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

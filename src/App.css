@@ -1,6 +1,7 @@
 .navBar {
   background-color: #f2f2f2;
-  padding: 10px;
+  padding-left: 2%;
+  padding-right: 2%;
   display: flex;
   justify-content: space-between;
   font-size: larger;

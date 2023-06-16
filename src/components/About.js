@@ -1,8 +1,9 @@
 import React from 'react';
+import './About.css';
 
 function About() {
   return (
-    <div>
+    <section className="aboutBody">
       <h2>Welcome to my page!</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -25,7 +26,7 @@ function About() {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </p>
-    </div>
+    </section>
   );
 }
 
