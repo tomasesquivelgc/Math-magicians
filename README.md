@@ -60,7 +60,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Coming soon
+You can try the Demo in [This Link](https://glowing-bienenstitch-48d70a.netlify.app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
