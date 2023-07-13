@@ -1,0 +1,41 @@
+.calculatorBody {
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+}
+
+.calculator {
+  text-align: right;
+  border: 1px solid black;
+  width: 300px;
+  background-color: #858694;
+}
+
+button {
+  height: 6vh;
+  border: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+.double-button {
+  grid-column: span 2;
+}
+
+.buttons > :nth-child(4n),
+.buttons > :last-child {
+  background-color: orange;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: aqua !important;
+}
+
+.display {
+  color: white;
+}
